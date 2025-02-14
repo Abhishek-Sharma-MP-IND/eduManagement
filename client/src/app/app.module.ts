@@ -17,6 +17,7 @@ import { BookingDetailsComponent } from './booking-details/booking-details.compo
 
 import { RegisterForEventComponent } from './register-for-event/register-for-event.component';
 import { NavComponent } from './shared/nav/nav.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavComponent } from './shared/nav/nav.component';
       ViewEventsComponent,
       BookingDetailsComponent,
       RegisterForEventComponent,
-      NavComponent
+      NavComponent,
+      LandingPageComponent
   ],
   imports: [
     BrowserModule,

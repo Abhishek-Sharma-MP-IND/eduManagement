@@ -30,11 +30,28 @@ public class RegisterAndLoginController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @PostMapping("/api/user/register")
-    public ResponseEntity<User> registerUser(@RequestBody User user) {
-        User registeredUser = userService.registerUser(user);
-        return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
+    // @PostMapping("/api/user/register")
+    // public ResponseEntity<User> registerUser(@RequestBody User user) {
+
+
+    //     User registeredUser = userService.registerUser(user);
+    //     return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
+    // }
+
+@PostMapping("/api/user/register")
+public ResponseEntity<User> registerUser(@RequestBody User user) {
+    if (userService.existsByUsername(user.getUsername())) {
+        throw new ResponseStatusException(HttpStatus.CONFLICT, "User already exists");
     }
+    User registeredUser = userService.registerUser(user);
+    return new ResponseEntity<>(registeredUser, HttpStatus.CREATED);
+}
+
+
+
+
+
+    
 
     @PostMapping("/api/user/login")
     public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequest) {
