@@ -92,3 +92,58 @@ button:hover {
   text-align: center;
   color: #007bb5;
 }
+
+
+/* Wrapper to align image and form side by side */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Login form container */
+.login-container {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 60%;
+  }
+
+  .login-container {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+}
