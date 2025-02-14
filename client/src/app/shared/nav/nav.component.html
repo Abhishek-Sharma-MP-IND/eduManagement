@@ -16,6 +16,7 @@
     <li><a href="#" (click)="onLogout()">Logout</a></li>
    </ng-container>
    <ng-container *ngIf="role === 'institution'">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
     <li><a routerLink="/create-event">Create Event</a></li>
     <li><a routerLink="/add-resource">Add Resource</a></li>
     <li><a routerLink="/resource-allocate">Allocate Resource</a></li>
