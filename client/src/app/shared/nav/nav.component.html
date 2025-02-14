@@ -7,7 +7,6 @@
    <ng-container *ngIf="role === 'student'">
     <li><a routerLink="/dashboard">Dashboard</a></li>
     <li><a routerLink="/booking-details">View Booking Status</a></li>
-    <!-- <li><a routerLink="/register-for-event">Register for Event</a></li> -->
     <li><a href="#" (click)="onLogout()">Logout</a></li>
    </ng-container>
    <ng-container *ngIf="role === 'educator'">
