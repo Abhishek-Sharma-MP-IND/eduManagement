@@ -5,7 +5,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 
 import { AppComponent } from './app.component';
-import { DashbaordComponent } from './dashbaord/dashbaord.component';
+import { DashboardComponent } from './dashbaord/dashbaord.component';
 
 import { CreateEventComponent } from './create-event/create-event.component';
 import { AddResourceComponent } from './add-resource/add-resource.component';
@@ -18,16 +18,16 @@ import { RegisterForEventComponent } from './register-for-event/register-for-eve
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: 'dashboard', component: DashbaordComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'create-event', component: CreateEventComponent },  
   { path: 'add-resource', component: AddResourceComponent }, 
   { path: 'resource-allocate', component: ResourceAllocateComponent },  
   { path: 'view-events', component: ViewEventsComponent },  
   { path: 'booking-details', component: BookingDetailsComponent }, 
   { path: 'register-for-event', component: RegisterForEventComponent },   
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-  { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({
