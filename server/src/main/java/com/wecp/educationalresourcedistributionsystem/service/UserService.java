@@ -43,4 +43,8 @@ public class UserService implements UserDetailsService {
                 new ArrayList<>()
         );
     }
+
+    public boolean existsByUsername(String username){
+        return userRepository.existsByUsername(username);
+    }
 }

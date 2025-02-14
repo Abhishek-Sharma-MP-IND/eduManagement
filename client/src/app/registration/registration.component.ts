@@ -15,6 +15,9 @@ export class RegistrationComponent implements OnInit {
   formModel: any;
   showMessage: boolean = false;
   responseMessage: any;
+  errorMessage:any;
+  showError: boolean = false;
+  
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,16 +42,17 @@ export class RegistrationComponent implements OnInit {
       // Call HTTP service to register
       this.httpService.registerUser(this.formModel).subscribe(
         (response) => {
-
           this.responseMessage = "Registration successfull!";
           this.showMessage = true;
           setTimeout(() => {
             this.route.navigateByUrl('/login');
-          }, 2000);
+          }, 1000);
         },
         (error) => {
-          this.responseMessage = error;
+          
           this.showMessage = true;
+          this.showError = true;
+          this.responseMessage = "User Already Exists!";
         }
       );
     }

@@ -44,7 +44,7 @@
         <button type="submit" [disabled]="itemForm.invalid">Submit</button>
     </form>
     <p><a routerLink="login" class="login-link">Login Instead?</a></p>
-    <div *ngIf="showMessage" class="response-message">
-        {{ responseMessage | json }}
-    </div>
+    <div *ngIf="responseMessage" class="message" [ngClass]="{'success-message': showMessage && !showError, 'error-message': showError}">
+        {{ responseMessage }}
+      </div>
 </div>

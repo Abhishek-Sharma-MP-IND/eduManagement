@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'register-for-event', component: RegisterForEventComponent },   
   { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
 
+
   { path: '**', redirectTo: '/landing-page', pathMatch: 'full' },
   { path: 'landing-page', component: LandingPageComponent},
 ];
