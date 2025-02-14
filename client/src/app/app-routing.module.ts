@@ -16,6 +16,7 @@ import { RegisterForEventComponent } from './register-for-event/register-for-eve
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
@@ -23,13 +24,14 @@ const routes: Routes = [
   { path: 'create-event', component: CreateEventComponent },  
   { path: 'add-resource', component: AddResourceComponent }, 
   { path: 'resource-allocate', component: ResourceAllocateComponent },  
-  { path: 'view-events', component: ViewEventsComponent },  
+  { path: 'view-events', component: ViewEventsComponent }, 
   { path: 'booking-details', component: BookingDetailsComponent }, 
   { path: 'register-for-event', component: RegisterForEventComponent },   
   { path: '', redirectTo: '/landing-page', pathMatch: 'full' },
-  {path:'landing-page',component:LandingPageComponent},
+
 
   { path: '**', redirectTo: '/landing-page', pathMatch: 'full' },
+  { path: 'landing-page', component: LandingPageComponent},
 ];
 
 @NgModule({
