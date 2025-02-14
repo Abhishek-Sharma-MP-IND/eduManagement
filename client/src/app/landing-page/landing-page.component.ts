@@ -30,5 +30,4 @@ scrollToSection(sectionId: string): void {
   }
 
 
-
 }
