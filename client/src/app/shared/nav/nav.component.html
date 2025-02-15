@@ -1,0 +1,50 @@
+<!-- <style>
+    .navbar {
+    background: linear-gradient(135deg, #120956d8, #120956d8);
+      /* background: transparent; */
+      transition: background 0.3s ease-in-out;
+      position: fixed;
+      width: 100vw;
+      z-index: 1;
+  }
+  .navbar {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #120956d8, #120956d8);
+  }
+  
+</style> -->
+<nav class="navbar">
+ 
+
+
+ <div class="brand-name"><h1 style="color: white;">EduSync</h1>
+  <style>
+    h1 {
+              font-size: 32px;
+              color: white;
+              padding-top: 2px;
+              padding-bottom: 2px;
+          }
+  </style>
+</div>
+  <ul>
+   <ng-container *ngIf="role === 'student'">
+
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/booking-details">Registration Status</a></li>
+    <!-- <li><a routerLink="/register-for-event">Register for Event</a></li> -->
+    <li><a href="#" (click)="onLogout()">Logout</a></li>
+   </ng-container>
+   <ng-container *ngIf="role === 'educator'">
+    <li><a routerLink="/dashboard">View Events</a></li>
+    <li><a href="#" (click)="onLogout()">Logout</a></li>
+   </ng-container>
+   <ng-container *ngIf="role === 'institution'">
+    <li><a routerLink="/dashboard">Dashboard</a></li>
+    <li><a routerLink="/create-event">Create Event</a></li>
+    <li><a routerLink="/add-resource">Add Resource</a></li>
+    <li><a routerLink="/resource-allocate">Allocate Resource</a></li>
+    <li><a href="#" (click)="onLogout()">Logout</a></li>
+   </ng-container>
+  </ul>  
+ </nav> 
